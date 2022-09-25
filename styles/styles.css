@@ -1,0 +1,160 @@
+/* universal CSS */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --tan: #EFDFB6;
+    --brown: #513028;
+    --black: #332E2C;
+    --red: #BA2621;
+    --green: #03724B;
+}
+
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: var(--tan);
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+    text-decoration: inherit;
+    font-weight: inherit;
+}
+
+
+h1, h2, h3, p {
+    margin: 2rem 0.7rem;
+
+}
+
+h1 {
+    line-height: 5.5rem;
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 1.3rem;
+    padding: 0.2rem 0 0.2rem;
+}
+
+p {
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+}
+
+footer {
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+}
+
+/*Text highlight*/
+.brown-highlight {
+    color: var(--tan);
+    background-color: var(--brown);
+    border-radius: 0.5rem;
+    padding: 0 0.2rem;
+    text-transform: uppercase;
+}
+
+.green-highlight {
+    color: var(--green);
+}
+
+.red-highlight {
+    color: var(--red);
+}
+
+.add {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Main collection*/
+.collection {
+    margin: 1rem;
+    /*display: grid;*/
+}
+
+.collection h2 {
+    font-size: 3rem;
+}
+
+.collection h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.card {
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image {
+    background: url("../images/coffee-1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+
+    color: var(--tan);
+
+    padding: 5rem 2rem;
+}
+
+.card-image hr {
+    width: 70%;
+    height: 0.2rem;
+    background-color: var(--tan);
+    border: none
+}
+
+.button {
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+}
+
+.button a {
+    font-weight: 600;
+    padding: 0.6rem 1rem;
+}
+
+@media screen and (min-width: 700px) {
+    h1 {
+        margin: 0 4rem;
+        font-size: 6rem;
+        line-height: 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    h2 {
+        margin: 4rem;
+        font-size: 3.5rem;
+    }
+    h3 {
+        margin: 4rem;
+        font-size: 2.5rem;
+    }
+    .collection {
+        margin: 4rem;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+}
