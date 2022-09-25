@@ -1,0 +1,20 @@
+/* universal CSS */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  /*font-family: ;*/
+  /*color: ;*/
+  /*background-color: ;*/
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: inherit;
+  font-weight: inherit;
+}
