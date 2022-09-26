@@ -13,7 +13,7 @@
 
 
 body {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Vidaloka', serif;
     background-color: var(--tan);
 }
 
@@ -29,12 +29,12 @@ a:active {
 
 
 h1, h2, h3 {
-    margin: 2rem 0.7rem;
     text-transform: uppercase;
+    text-align: center;
 }
 
 h1 {
-    font-size: 3.8rem;
+    font-size: 4rem;
 }
 
 h2 {
@@ -51,7 +51,7 @@ h4 {
 }
 
 p {
-    margin-top: 0.5rem;
+    margin: 0.5rem 0 3rem;
     font-size: 1.3rem;
 }
 
@@ -61,12 +61,15 @@ footer {
     text-align: center;
 }
 
+footer p {
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
 /*Text highlight*/
 .brown-highlight {
     color: var(--tan);
     background-color: var(--brown);
-    border-radius: 0.5rem;
-    padding: 0 0.2rem;
 }
 
 .green-highlight {
@@ -77,9 +80,27 @@ footer {
     color: var(--red);
 }
 
-.add {
+/*Navbar*/
+nav {
+    background-color: var(--tan);
+    box-shadow: 0 2px 4px -1px #00000090;
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 700;
+
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+/*Title*/
+.title {
+    margin: 6rem 0 0;
 }
 
 /*Main collection*/
@@ -118,6 +139,11 @@ footer {
     color: var(--tan);
 
     padding: 3rem 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .card-image hr {
@@ -129,14 +155,10 @@ footer {
 
 .button {
     text-align: center;
+    font-size: 1.5rem;
 
     display: flex;
     justify-content: center;
-}
-
-.button a {
-    font-weight: 600;
-    padding: 0.6rem 1rem;
 }
 
 @media screen and (min-width: 700px) {
@@ -153,13 +175,40 @@ footer {
     }
     h3 {
         margin: 4rem;
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .collection {
         margin: 4rem;
 
         display: grid;
         grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+    /*underline*/
+    .underline {
+        padding-bottom: 0.25rem;
+        position: relative;
+    }
+
+    .underline::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 3px;
+        background-color: var(--green);
+        transition: width 0.25s ease-out;
+    }
+
+    .underline:hover::before {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1250px) {
+    .collection {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         column-gap: 2rem;
     }
 }
