@@ -43,7 +43,6 @@ function extractFromDB(PDO $pdo): array
     return $query->fetchAll();
 }
 
-
 /**
  * Function to take the data from the database and generate a HTML card element, returned as string
  *
