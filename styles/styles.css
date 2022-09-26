@@ -29,7 +29,6 @@ a:active {
 
 
 h1, h2, h3 {
-    margin: 2rem 0.7rem;
     text-transform: uppercase;
     text-align: center;
 }
@@ -68,6 +67,11 @@ footer p {
 }
 
 /*Text highlight*/
+.brown-highlight {
+    color: var(--tan);
+    background-color: var(--brown);
+}
+
 .green-highlight {
     color: var(--green);
 }
@@ -96,7 +100,7 @@ nav {
 
 /*Title*/
 .title {
-    margin-top: 6rem;
+    margin: 6rem 0 0;
 }
 
 /*Main collection*/

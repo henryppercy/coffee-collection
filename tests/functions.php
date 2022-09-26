@@ -6,7 +6,6 @@ class functions extends TestCase
 {
     public function test_generateCard_givenArray()
     {
-        // Arrange
         $input = [[
             'country' => 'Hello',
             'name' => 'Hello',
@@ -25,18 +24,15 @@ class functions extends TestCase
             <p>Hello</p>
         </div>';
 
-        // Act --> performing the unit that is under test
         $result = generateCard($input);
-        // Assert --> Compare the expected result to the actual result
+
         $this->assertEquals($expected, $result);
     }
     public function test_generateCard_givenInt()
     {
-        // Arrange
         $input = 1;
         $this->expectException(TypeError::class);
 
-        // Act --> performing the unit that is under test
         $result = generateCard($input);
     }
 }

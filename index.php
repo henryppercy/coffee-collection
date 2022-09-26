@@ -23,11 +23,11 @@ require_once('functions.php')
 </header>
 <main>
     <section id="title" class="title">
-        <h1>THE COFFEE CATALOGUE</h1>
+        <h1>THE <span class="brown-highlight">COFFEE</span> CATALOGUE</h1>
     </section>
     <h2>A Collection of Coffee from <span class="green-highlight">El Salvador</span> to  <span class="red-highlight">Ethiopia</span></h2>
     <section>
-        <h3>Explore the Coffee Below:</h3>
+        <h3>Explore the Coffee Below</h3>
     </section>
     <section class="collection">
         <?php
