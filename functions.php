@@ -42,3 +42,29 @@ function extractFromDB(PDO $pdo): array
     $query->execute();
     return $query->fetchAll();
 }
+
+
+/**
+ * Function to take the data from the database and generate a HTML card element, returned as string
+ *
+ * @param array $arrayFromDB
+ * @return string
+ */
+function generateCard(array $arrayFromDB): string
+{
+    $card = '';
+    foreach ($arrayFromDB as $itemFromDB) {
+        $card .=
+            '<div class="card">
+            <div class="card-image">
+                <h3>' . $itemFromDB['country'] . '</h3>
+                <h1>' . $itemFromDB['name'] . '</h1>
+                <hr>
+                <h2>' . $itemFromDB['process'] . '</h2>
+                <h4>' . $itemFromDB['altitude'] . 'm</h4>
+            </div>
+            <p>' . $itemFromDB['descriptors'] . '</p>
+        </div>';
+    }
+    return $card;
+}

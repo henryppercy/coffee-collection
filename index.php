@@ -1,3 +1,6 @@
+<?php
+require_once('functions.php')
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,16 +25,11 @@
         <h3 class="brown-highlight ">Add more </h3>
     </section>
     <section class="collection">
-        <div class="card">
-            <div class="card-image">
-                <h3>Brazil</h3>
-                <h1>Brazil Clássico</h1>
-                <hr>
-                <h2>Natural</h2>
-                <h4>1900m</h4>
-            </div>
-            <p>Honey / Sugarcane Molasses / Hazelnut</p>
-        </div>
+        <?php
+        $pdo = connectToDatabase();
+        $coffees = extractFromDB($pdo);
+        echo generateCard($coffees);
+        ?>
     </section>
     <section class="button">
             <h3 class="brown-highlight">Back to top</h3>
