@@ -28,23 +28,26 @@ a:active {
 }
 
 
-h1, h2, h3, p {
+h1, h2, h3 {
     margin: 2rem 0.7rem;
+    text-transform: uppercase;
 }
 
 h1 {
-    line-height: 5.5rem;
     font-size: 3.8rem;
 }
 
 h2 {
     font-size: 1.7rem;
-    text-transform: uppercase;
 }
 
 h3 {
     font-size: 1.3rem;
     padding: 0.2rem 0 0.2rem;
+}
+
+h4 {
+    font-size: 1.2rem;
 }
 
 p {
@@ -64,7 +67,6 @@ footer {
     background-color: var(--brown);
     border-radius: 0.5rem;
     padding: 0 0.2rem;
-    text-transform: uppercase;
 }
 
 .green-highlight {
@@ -83,16 +85,21 @@ footer {
 /*Main collection*/
 .collection {
     margin: 1rem;
-    /*display: grid;*/
+}
+
+.collection h1 {
+    font-size: 3rem;
+    margin: 0.7rem;
 }
 
 .collection h2 {
-    font-size: 3rem;
+    font-size: 2rem;
+    margin: 0.5rem;
 }
 
 .collection h3 {
-    font-size: 2rem;
-    text-transform: uppercase;
+    font-size: 1.3rem;
+    margin: 0.5rem 0.5rem 3rem;
 }
 
 .card {
@@ -103,14 +110,14 @@ footer {
 }
 
 .card-image {
-    background: url("../images/coffee-1.png");
+    background: url("../images/coffee-2.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto 100%;
 
     color: var(--tan);
 
-    padding: 5rem 2rem;
+    padding: 3rem 1rem;
 }
 
 .card-image hr {
@@ -136,7 +143,6 @@ footer {
     h1 {
         margin: 0 4rem;
         font-size: 6rem;
-        line-height: 8rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;

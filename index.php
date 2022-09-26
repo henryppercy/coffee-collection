@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,27 +24,13 @@
     <section class="collection">
         <div class="card">
             <div class="card-image">
-                <h2>Ethiopia</h2>
+                <h3>Brazil</h3>
+                <h1>Brazil Clássico</h1>
                 <hr>
-                <h3>Natural</h3>
+                <h2>Natural</h2>
+                <h4>1900m</h4>
             </div>
-            <p>Mead / Fig / White Grape</p>
-        </div>
-        <div class="card">
-            <div class="card-image">
-                <h2>Colombia</h2>
-                <hr>
-                <h3>Anaerobic</h3>
-            </div>
-            <p>White Grape / Honeysuckle / Cocoa</p>
-        </div>
-        <div class="card">
-            <div class="card-image">
-                <h2>EAST TIMOR </h2>
-                <hr>
-                <h3>Washed</h3>
-            </div>
-            <p>Red Grapefruit / White Grape / Biscoff Biscuit</p>
+            <p>Honey / Sugarcane Molasses / Hazelnut</p>
         </div>
     </section>
     <section class="button">
