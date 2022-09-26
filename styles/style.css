@@ -34,6 +34,7 @@ h1, h2, h3 {
 }
 
 h1 {
+    margin: 0;
     font-size: 4rem;
 }
 
@@ -66,10 +67,40 @@ footer p {
     font-size: 1rem;
 }
 
+a {
+    color: var(--tan);
+
+    position: relative;
+    text-transform: uppercase;
+
+}
+
+a {
+    box-shadow: inset 0 0 0 0 var(--brown);
+    color: var(--black);
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+a:hover {
+    color: var(--tan);
+    box-shadow: inset 200px 0 0 0 var(--brown);
+}
+
 /*Text highlight*/
-.brown-highlight {
+.brown-bg-highlight {
     color: var(--tan);
     background-color: var(--brown);
+}
+
+.green-bg-highlight {
+    color: var(--tan);
+    background-color: var(--green);
+}
+
+.red-bg-highlight {
+    color: var(--tan);
+    background-color: var(--red);
 }
 
 .green-highlight {
@@ -82,14 +113,10 @@ footer p {
 
 /*Navbar*/
 nav {
-    background-color: var(--tan);
-    box-shadow: 0 2px 4px -1px #00000090;
     padding: 1em;
-    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
-    text-transform: uppercase;
     font-size: 1.3rem;
     font-weight: 700;
 
@@ -100,7 +127,7 @@ nav {
 
 /*Title*/
 .title {
-    margin: 6rem 0 0;
+    /*margin: 4.3rem 0 0;*/
 }
 
 /*Main collection*/
@@ -131,7 +158,7 @@ nav {
 }
 
 .card-image {
-    background: url("../images/coffee-2.png");
+    background: url('../images/coffee-1.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto 100%;
@@ -163,11 +190,7 @@ nav {
 
 @media screen and (min-width: 700px) {
     h1 {
-        margin: 0 4rem;
         font-size: 6rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
     }
     h2 {
         margin: 4rem;
@@ -183,25 +206,6 @@ nav {
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 2rem;
-    }
-    /*underline*/
-    .underline {
-        padding-bottom: 0.25rem;
-        position: relative;
-    }
-
-    .underline::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        width: 0;
-        height: 3px;
-        background-color: var(--green);
-        transition: width 0.25s ease-out;
-    }
-
-    .underline:hover::before {
-        width: 100%;
     }
 }
 
