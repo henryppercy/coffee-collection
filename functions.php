@@ -73,7 +73,7 @@ function generateCard(array $arrayFromDB): string
     foreach ($arrayFromDB as $itemFromDB) {
         $card .=
     '<div class="card">
-        <div class="card-image  ' . $itemFromDB['image'] . '">
+        <div class="card-image ' . $itemFromDB['image'] . '">
             <h3>' . $itemFromDB['country'] . '</h3>
             <h1>' . $itemFromDB['name'] . '</h1>
             <hr>
