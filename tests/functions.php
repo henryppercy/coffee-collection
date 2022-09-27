@@ -13,11 +13,12 @@ class functions extends TestCase
             'altitude' => 'Test',
             'descriptors_one' => 'Test',
             'descriptors_two' => 'Test',
-            'descriptors_three' => 'Test'
+            'descriptors_three' => 'Test',
+            'image' => 'Test'
             ]];
         $expected =
             '<div class="card">
-        <div class="card-image">
+        <div class="card-image Test">
             <h3>Test</h3>
             <h1>Test</h1>
             <hr>
