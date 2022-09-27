@@ -17,20 +17,20 @@ class functions extends TestCase
             'image' => 'Test'
             ]];
         $expected =
-            '<div class="card">
-        <div class="card-image Test">
-            <h3>Test</h3>
-            <h1>Test</h1>
-            <hr>
-            <h2>Test</h2>
-            <h4>Testm</h4>
-        </div>
-        <div class="descriptors">
-            <p class="descriptor">Test</p>
-            <p class="descriptor">Test</p>
-            <p class="descriptor">Test</p> 
-        </div>           
-    </div>';
+        '<div class="card">'
+            . '<div class="card-image Test">'
+                . '<h3>Test</h3>'
+                . '<h1>Test</h1>'
+                . '<hr>'
+                . '<h2>Test</h2>'
+                . '<h4>Testm</h4>'
+             . '</div>'
+        . '<div class="descriptors">'
+            . '<p class="descriptor">Test</p>'
+             . '<p class="descriptor">Test</p>'
+            . '<p class="descriptor">Test</p>'
+        . '</div>'
+    . '</div>';
 
         $result = generateCard($input);
         $this->assertEquals($expected, $result);
