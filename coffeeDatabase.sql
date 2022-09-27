@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.39)
 # Database: coffeecollection
-# Generation Time: 2022-09-27 10:01:44 +0000
+# Generation Time: 2022-09-27 13:23:21 +0000
 # ************************************************************
 
 
@@ -34,23 +34,26 @@ CREATE TABLE `coffees` (
                            `descriptors_two` varchar(255) DEFAULT NULL,
                            `descriptors_three` varchar(255) DEFAULT NULL,
                            `altitude` int(11) DEFAULT NULL,
+                           `image` varchar(255) NOT NULL,
                            PRIMARY KEY (`id`),
                            KEY `origin` (`origin`),
                            KEY `process` (`process`),
                            CONSTRAINT `coffees_ibfk_1` FOREIGN KEY (`origin`) REFERENCES `countries` (`id`),
                            CONSTRAINT `coffees_ibfk_2` FOREIGN KEY (`process`) REFERENCES `processes` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 LOCK TABLES `coffees` WRITE;
 /*!40000 ALTER TABLE `coffees` DISABLE KEYS */;
 
-INSERT INTO `coffees` (`id`, `name`, `origin`, `process`, `descriptors_one`, `descriptors_two`, `descriptors_three`, `altitude`)
+INSERT INTO `coffees` (`id`, `name`, `origin`, `process`, `descriptors_one`, `descriptors_two`, `descriptors_three`, `altitude`, `image`)
 VALUES
-    (1,'Brazil Classico',1,1,'Honey','Surgarcane Molasses ','Hazelnut',1500),
-    (2,'BS1 Espresso',2,2,'Milk Choc','Sticky Caramel','Red Fruit',2000),
-    (3,'Indonesia Kerinchi',4,1,'Cherry Choc','Lemon','Brown Spice',1700),
-    (4,'Los Altos',12,2,'Roasted Almond','Chocolate','Brown Surgar',1300),
-    (5,'Kirundo Cafex ',31,1,'Baked Apple','Dates','Oolong Tea',1730);
+    (1,'Brazil Classico',1,1,'Honey','Surgarcane Molasses ','Hazelnut',1500,'bgImgOne'),
+    (2,'BS1 Espresso',2,2,'Milk Choc','Sticky Caramel','Red Fruit',2000,'bgImgTwo'),
+    (3,'Indonesia Kerinchi',4,1,'Cherry Choc','Lemon','Brown Spice',1700,'bgImgThree'),
+    (4,'Los Altos',12,2,'Roasted Almond','Chocolate','Brown Surgar',1300,'bgImgFour'),
+    (5,'Kirundo Cafex ',31,1,'Baked Apple','Dates','Oolong Tea',1730,'bgImgFive'),
+    (6,'Finca Hartmann',37,2,'Apricot','Damson','Dark Chocolate',1800,'bgImgSix'),
+    (7,'Santa Elena',19,2,'Clementine','Plum','Sugarcane',1900,'bgImgEight');
 
 /*!40000 ALTER TABLE `coffees` ENABLE KEYS */;
 UNLOCK TABLES;
