@@ -91,4 +91,4 @@ function generateCard(array $arrayFromDB): string
         . '</div>';
     }
     return $card;
-} 
+}

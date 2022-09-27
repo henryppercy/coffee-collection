@@ -15,12 +15,6 @@ require_once('functions.php')
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Vidaloka&display=swap" rel="stylesheet">
 </head>
 <body>
-<header id="top">
-<nav>
-    <a href="#top">Home</a>
-    <a href="#">Add more coffee</a>
-</nav>
-</header>
 <main>
     <section class="title">
         <h1 class="green-bg-highlight">The</h1>
