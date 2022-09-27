@@ -36,9 +36,10 @@ function connectToDatabase(): PDO
 function extractFromDB(PDO $pdo): array
 {
     $query = $pdo->prepare(
-        'SELECT `coffees`.`id`, `name`, `countries`.`country`, `processes`.`process`, `descriptors`, `altitude`
+        'SELECT `coffees`.`id`, `name`, `countries`.`country`, `processes`.`process`, `descriptors_one`, 
+                `descriptors_two`, `descriptors_three`, `altitude`
                 FROM `coffees` LEFT JOIN `countries` ON `coffees`.`origin` = `countries`.`id` LEFT JOIN `processes` 
-                 ON `coffees`.`process` = `processes`.`id`;');
+                ON `coffees`.`process` = `processes`.`id`;');
     $query->execute();
     return $query->fetchAll();
 }
@@ -62,7 +63,11 @@ function generateCard(array $arrayFromDB): string
                 <h2>' . $itemFromDB['process'] . '</h2>
                 <h4>' . $itemFromDB['altitude'] . 'm</h4>
             </div>
-            <p>' . $itemFromDB['descriptors'] . '</p>
+            <div class="descriptors">
+                <p class="descriptor">' . $itemFromDB['descriptors_one'] . '</p>
+                <p class="descriptor">' . $itemFromDB['descriptors_two'] . '</p>
+                <p class="descriptor">' . $itemFromDB['descriptors_three'] . '</p> 
+            </div>           
         </div>';
     }
     return $card;

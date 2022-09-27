@@ -52,19 +52,7 @@ h4 {
 }
 
 p {
-    margin: 0.5rem 0 3rem;
     font-size: 1.3rem;
-}
-
-footer {
-    width: 100%;
-    height: 4rem;
-    text-align: center;
-}
-
-footer p {
-    margin-top: 2rem;
-    font-size: 1rem;
 }
 
 a {
@@ -72,22 +60,9 @@ a {
 
     position: relative;
     text-transform: uppercase;
-
 }
 
-a {
-    box-shadow: inset 0 0 0 0 var(--brown);
-    color: var(--black);
-    padding: 0 .25rem;
-    margin: 0 -.25rem;
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-}
-a:hover {
-    color: var(--tan);
-    box-shadow: inset 200px 0 0 0 var(--brown);
-}
-
-/*Text highlight*/
+/*Text highlights*/
 .brown-bg-highlight {
     color: var(--tan);
     background-color: var(--brown);
@@ -157,6 +132,19 @@ nav {
     flex-direction: column;
 }
 
+.descriptors {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.descriptor {
+    padding: 0 0.4rem 0;
+}
+
+
 .card-image {
     background: url('../images/coffee-1.png');
     background-repeat: no-repeat;
@@ -188,6 +176,19 @@ nav {
     justify-content: center;
 }
 
+/*Footer*/
+footer {
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+}
+
+footer p {
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
+/*Media queries*/
 @media screen and (min-width: 700px) {
     h1 {
         font-size: 6rem;
@@ -206,6 +207,17 @@ nav {
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 2rem;
+    }
+    a {
+        box-shadow: inset 0 0 0 0 var(--brown);
+        color: var(--black);
+        padding: 0 .25rem;
+        margin: 0 -.25rem;
+        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    }
+    a:hover {
+        color: var(--tan);
+        box-shadow: inset 200px 0 0 0 var(--brown);
     }
 }
 
