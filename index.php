@@ -27,9 +27,9 @@ require_once('functions.php')
         <h1 class="brown-bg-highlight">Coffee</h1>
         <h1 class="red-bg-highlight">Catalogue</h1>
     </section>
-    <h2>A Collection of Coffee from <span class="green-highlight">El Salvador</span> to  <span class="red-highlight">Ethiopia</span></h2>
     <section>
-        <h3>Please Explore the Coffee Below</h3>
+    <h2>A Collection of Coffee from <span class="green-highlight">El Salvador</span> to  <span class="red-highlight">Ethiopia</span></h2>
+    <h3>Please Explore the Coffee Below</h3>
     </section>
     <section class="collection">
         <?php
