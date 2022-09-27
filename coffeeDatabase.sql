@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.39)
 # Database: coffeecollection
-# Generation Time: 2022-09-26 11:56:36 +0000
+# Generation Time: 2022-09-27 10:01:44 +0000
 # ************************************************************
 
 
@@ -30,7 +30,9 @@ CREATE TABLE `coffees` (
                            `name` varchar(255) DEFAULT NULL,
                            `origin` int(11) NOT NULL,
                            `process` int(11) NOT NULL,
-                           `descriptors` varchar(255) DEFAULT NULL,
+                           `descriptors_one` varchar(255) DEFAULT NULL,
+                           `descriptors_two` varchar(255) DEFAULT NULL,
+                           `descriptors_three` varchar(255) DEFAULT NULL,
                            `altitude` int(11) DEFAULT NULL,
                            PRIMARY KEY (`id`),
                            KEY `origin` (`origin`),
@@ -42,13 +44,13 @@ CREATE TABLE `coffees` (
 LOCK TABLES `coffees` WRITE;
 /*!40000 ALTER TABLE `coffees` DISABLE KEYS */;
 
-INSERT INTO `coffees` (`id`, `name`, `origin`, `process`, `descriptors`, `altitude`)
+INSERT INTO `coffees` (`id`, `name`, `origin`, `process`, `descriptors_one`, `descriptors_two`, `descriptors_three`, `altitude`)
 VALUES
-    (1,'Brazil Clássico',1,1,'Honey / Surgarcane molasses / Hazelnut',1500),
-    (2,'BS1 Espresso',2,2,'Milk Choc / Sticky Caramel / Red Fruit',2000),
-    (3,'Indonesia Kerinchi',4,1,'Cherry Choc / Lemon / Brown Spice',1700),
-    (4,'Los Altos',12,2,'Roasted Almond / Chocolate / Brown Sugar',1300),
-    (5,'Kirundo Cafex ',31,1,'Baked Apple / Dates / Oolong Tea',1730);
+    (1,'Brazil Classico',1,1,'Honey','Surgarcane Molasses ','Hazelnut',1500),
+    (2,'BS1 Espresso',2,2,'Milk Choc','Sticky Caramel','Red Fruit',2000),
+    (3,'Indonesia Kerinchi',4,1,'Cherry Choc','Lemon','Brown Spice',1700),
+    (4,'Los Altos',12,2,'Roasted Almond','Chocolate','Brown Surgar',1300),
+    (5,'Kirundo Cafex ',31,1,'Baked Apple','Dates','Oolong Tea',1730);
 
 /*!40000 ALTER TABLE `coffees` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -84,43 +86,43 @@ VALUES
     (12,'Nicaragua'),
     (13,'China'),
     (14,'Côte dIvoire'),
-	(15,'Costa Rica'),
-	(16,'Kenya'),
-	(17,'Papua New Guinea'),
-	(18,'Tanzania'),
-	(19,'El Salvador'),
-	(20,'Ecuador'),
-	(21,'Cameroon'),
-	(22,'Laos'),
-	(23,'Madagascar'),
-	(24,'Gabon'),
-	(25,'Thailand'),
-	(26,'Venezuela'),
-	(27,'Dominican Republic'),
-	(28,'Haiti'),
-	(29,'Democratic Republic of the Congo'),
-	(30,'Rwanda'),
-	(31,'Burundi'),
-	(32,'Philippines'),
-	(33,'Togo'),
-	(34,'Guinea'),
-	(35,'Yemen'),
-	(36,'Cuba'),
-	(37,'Panama'),
-	(38,'Bolivia'),
-	(39,'Timor Leste'),
-	(40,'Central African Republic'),
-	(41,'Nigeria'),
-	(42,'Ghana'),
-	(43,'Sierra Leone'),
-	(44,'Angola'),
-	(45,'Jamaica'),
-	(46,'Paraguay'),
-	(47,'Malawi'),
-	(48,'Trinidad and Tobago'),
-	(49,'Zimbabwe'),
-	(50,'Liberia'),
-	(51,'Zambia');
+    (15,'Costa Rica'),
+    (16,'Kenya'),
+    (17,'Papua New Guinea'),
+    (18,'Tanzania'),
+    (19,'El Salvador'),
+    (20,'Ecuador'),
+    (21,'Cameroon'),
+    (22,'Laos'),
+    (23,'Madagascar'),
+    (24,'Gabon'),
+    (25,'Thailand'),
+    (26,'Venezuela'),
+    (27,'Dominican Republic'),
+    (28,'Haiti'),
+    (29,'Democratic Republic of the Congo'),
+    (30,'Rwanda'),
+    (31,'Burundi'),
+    (32,'Philippines'),
+    (33,'Togo'),
+    (34,'Guinea'),
+    (35,'Yemen'),
+    (36,'Cuba'),
+    (37,'Panama'),
+    (38,'Bolivia'),
+    (39,'Timor Leste'),
+    (40,'Central African Republic'),
+    (41,'Nigeria'),
+    (42,'Ghana'),
+    (43,'Sierra Leone'),
+    (44,'Angola'),
+    (45,'Jamaica'),
+    (46,'Paraguay'),
+    (47,'Malawi'),
+    (48,'Trinidad and Tobago'),
+    (49,'Zimbabwe'),
+    (50,'Liberia'),
+    (51,'Zambia');
 
 /*!40000 ALTER TABLE `countries` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -132,9 +134,9 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `processes`;
 
 CREATE TABLE `processes` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `process` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+                             `id` int(11) NOT NULL AUTO_INCREMENT,
+                             `process` varchar(255) DEFAULT NULL,
+                             PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 LOCK TABLES `processes` WRITE;
@@ -142,9 +144,9 @@ LOCK TABLES `processes` WRITE;
 
 INSERT INTO `processes` (`id`, `process`)
 VALUES
-	(1,'Natural'),
-	(2,'Washed'),
-	(3,'Honey');
+    (1,'Natural'),
+    (2,'Washed'),
+    (3,'Honey');
 
 /*!40000 ALTER TABLE `processes` ENABLE KEYS */;
 UNLOCK TABLES;
