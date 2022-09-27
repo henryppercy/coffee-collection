@@ -1,6 +1,6 @@
 <?php
 /**
- * Connects to the database and returns the connection as $PDO
+ * Connects to the database and returns the connection as $PDO.
  *
  * @return PDO
  */
@@ -28,7 +28,7 @@ function connectToDatabase(): PDO
 
 /**
  * Takes the connection to the database ($PDO) and queries the database for all the information on a given coffee,
- * returns as an array
+ * returns as an array.
  *
  * @param PDO $pdo
  * @return array
@@ -45,30 +45,46 @@ function extractFromDB(PDO $pdo): array
 }
 
 /**
- * Function to take the data from the database and generate a HTML card element, returned as string
+ * Takes the data from the database and generate HTML card element, returned as string.
+ * If array from database in empty or values in database not set, throws exception.
  *
  * @param array $arrayFromDB
  * @return string
+ * @throws Exception
  */
 function generateCard(array $arrayFromDB): string
 {
+    if (count($arrayFromDB) === 0) {
+        throw new Exception('No data from database');
+    }
+    if (
+        !isset($arrayFromDB[0]['country']) ||
+        !isset($arrayFromDB[0]['name']) ||
+        !isset($arrayFromDB[0]['process']) ||
+        !isset($arrayFromDB[0]['altitude']) ||
+        !isset($arrayFromDB[0]['descriptors_one']) ||
+        !isset($arrayFromDB[0]['descriptors_two']) ||
+        !isset($arrayFromDB[0]['descriptors_three'])
+    ) {
+        throw new Exception('No value has been set');
+    }
     $card = '';
     foreach ($arrayFromDB as $itemFromDB) {
         $card .=
-            '<div class="card">
-            <div class="card-image">
-                <h3>' . $itemFromDB['country'] . '</h3>
-                <h1>' . $itemFromDB['name'] . '</h1>
-                <hr>
-                <h2>' . $itemFromDB['process'] . '</h2>
-                <h4>' . $itemFromDB['altitude'] . 'm</h4>
-            </div>
-            <div class="descriptors">
-                <p class="descriptor">' . $itemFromDB['descriptors_one'] . '</p>
-                <p class="descriptor">' . $itemFromDB['descriptors_two'] . '</p>
-                <p class="descriptor">' . $itemFromDB['descriptors_three'] . '</p> 
-            </div>           
-        </div>';
+    '<div class="card">
+        <div class="card-image">
+            <h3>' . $itemFromDB['country'] . '</h3>
+            <h1>' . $itemFromDB['name'] . '</h1>
+            <hr>
+            <h2>' . $itemFromDB['process'] . '</h2>
+            <h4>' . $itemFromDB['altitude'] . 'm</h4>
+        </div>
+        <div class="descriptors">
+            <p class="descriptor">' . $itemFromDB['descriptors_one'] . '</p>
+            <p class="descriptor">' . $itemFromDB['descriptors_two'] . '</p>
+            <p class="descriptor">' . $itemFromDB['descriptors_three'] . '</p> 
+        </div>           
+    </div>';
     }
     return $card;
 }
