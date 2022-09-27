@@ -37,7 +37,7 @@ function extractFromDB(PDO $pdo): array
 {
     $query = $pdo->prepare(
         'SELECT `coffees`.`id`, `name`, `countries`.`country`, `processes`.`process`, `descriptors_one`, 
-                `descriptors_two`, `descriptors_three`, `altitude`
+                `descriptors_two`, `descriptors_three`, `altitude`, `image`
                 FROM `coffees` LEFT JOIN `countries` ON `coffees`.`origin` = `countries`.`id` LEFT JOIN `processes` 
                 ON `coffees`.`process` = `processes`.`id`;');
     $query->execute();
@@ -64,7 +64,8 @@ function generateCard(array $arrayFromDB): string
         !isset($arrayFromDB[0]['altitude']) ||
         !isset($arrayFromDB[0]['descriptors_one']) ||
         !isset($arrayFromDB[0]['descriptors_two']) ||
-        !isset($arrayFromDB[0]['descriptors_three'])
+        !isset($arrayFromDB[0]['descriptors_three']) ||
+        !isset($arrayFromDB[0]['image'])
     ) {
         throw new Exception('No value has been set');
     }
@@ -72,7 +73,7 @@ function generateCard(array $arrayFromDB): string
     foreach ($arrayFromDB as $itemFromDB) {
         $card .=
     '<div class="card">
-        <div class="card-image">
+        <div class="card-image  ' . $itemFromDB['image'] . '">
             <h3>' . $itemFromDB['country'] . '</h3>
             <h1>' . $itemFromDB['name'] . '</h1>
             <hr>

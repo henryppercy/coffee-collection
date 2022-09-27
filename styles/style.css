@@ -144,9 +144,39 @@ nav {
     padding: 0 0.4rem 0;
 }
 
+.bgImgOne {
+    background: url('../images/coffee-1.png');
+}
+
+.bgImgTwo {
+    background: url('../images/coffee-2.png');
+}
+
+.bgImgThree {
+    background: url('../images/coffee-3.png');
+}
+
+.bgImgFour {
+    background: url('../images/coffee-4.png');
+}
+
+.bgImgFive {
+    background: url('../images/coffee-5.png');
+}
+
+.bgImgSix {
+    background: url('../images/coffee-6.png');
+}
+
+.bgImgEight {
+    background: url('../images/coffee-8.png');
+}
+
+.bgImgNine {
+    background: url('../images/coffee-9.png');
+}
 
 .card-image {
-    background: url('../images/coffee-1.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto 100%;
