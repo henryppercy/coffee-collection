@@ -74,7 +74,7 @@ function generateCard(array $arrayFromDB): string
         $card .=
         '<div class="card">'
             . '<div class="card-box">'
-                . '<img class="card-image" src="images/coffee-1.png" alt="Stock image of coffee farm">'
+                . '<img class="card-image" src="' . $itemFromDB['image'] . '" alt="Stock image of coffee farm">'
                 . '<div class="card-text">'
                     . '<h3>' . $itemFromDB['country'] . '</h3>'
                     . '<h1>' . $itemFromDB['name'] . '</h1>'
