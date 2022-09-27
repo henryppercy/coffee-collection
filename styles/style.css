@@ -11,7 +11,6 @@
     --green: #03724B;
 }
 
-
 body {
     font-family: 'Vidaloka', serif;
     background-color: var(--tan);
@@ -26,7 +25,6 @@ a:active {
     text-decoration: inherit;
     font-weight: inherit;
 }
-
 
 h1, h2, h3 {
     text-transform: uppercase;
@@ -172,10 +170,6 @@ nav {
     background: url('../images/coffee-8.png');
 }
 
-.bgImgNine {
-    background: url('../images/coffee-9.png');
-}
-
 .card-image {
     background-repeat: no-repeat;
     background-position: center;
@@ -223,14 +217,17 @@ footer p {
     h1 {
         font-size: 6rem;
     }
+
     h2 {
         margin: 4rem;
         font-size: 3.5rem;
     }
+
     h3 {
         margin: 4rem;
         font-size: 2rem;
     }
+
     .collection {
         margin: 4rem;
 
@@ -238,6 +235,7 @@ footer p {
         grid-template-columns: 1fr 1fr;
         column-gap: 2rem;
     }
+
     a {
         box-shadow: inset 0 0 0 0 var(--brown);
         color: var(--black);
@@ -245,6 +243,7 @@ footer p {
         margin: 0 -.25rem;
         transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
     }
+
     a:hover {
         color: var(--tan);
         box-shadow: inset 200px 0 0 0 var(--brown);
