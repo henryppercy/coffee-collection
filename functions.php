@@ -72,20 +72,23 @@ function generateCard(array $arrayFromDB): string
     $card = '';
     foreach ($arrayFromDB as $itemFromDB) {
         $card .=
-            '<div class="card">'
-                . '<div class="card-image ' . $itemFromDB['image'] . '">'
+        '<div class="card">'
+            . '<div class="card-box">'
+                . '<img class="card-image" src="images/coffee-1.png" alt="Stock image of coffee farm">'
+                . '<div class="card-text">'
                     . '<h3>' . $itemFromDB['country'] . '</h3>'
                     . '<h1>' . $itemFromDB['name'] . '</h1>'
                     . '<hr>'
                     . '<h2>' . $itemFromDB['process'] . '</h2>'
                     . '<h4>' . $itemFromDB['altitude'] . 'm</h4>'
                 . '</div>'
-                . '<div class="descriptors">'
-                    . '<p class="descriptor">' . $itemFromDB['descriptors_one'] . '</p>'
-                    . '<p class="descriptor">' . $itemFromDB['descriptors_two'] . '</p>'
-                    . '<p class="descriptor">' . $itemFromDB['descriptors_three'] . '</p>'
-                . '</div>'
-            . '</div>';
+            . '</div>'
+            . '<div class="descriptors">'
+                . '<p class="descriptor">' . $itemFromDB['descriptors_one'] . '</p>'
+                . '<p class="descriptor">' . $itemFromDB['descriptors_two'] . '</p>'
+                . '<p class="descriptor">' . $itemFromDB['descriptors_three'] . '</p>'
+           . '</div>'
+        . '</div>';
     }
     return $card;
-}
+} 
