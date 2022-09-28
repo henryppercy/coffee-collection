@@ -13,7 +13,3 @@ if (isset($_POST['name']) &&
     addToDatabase($_POST, $pdo);
     header('location: index.php');
 }
-
-
-
-

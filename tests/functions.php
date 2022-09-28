@@ -7,30 +7,33 @@ class functions extends TestCase
     public function test_generateCard_givenArray()
     {
         $input = [[
-            'country' => 'Test',
-            'name' => 'Test',
-            'process' => 'Test',
-            'altitude' => 'Test',
-            'descriptors_one' => 'Test',
-            'descriptors_two' => 'Test',
-            'descriptors_three' => 'Test',
-            'image' => 'Test'
+            'country' => 'test',
+            'name' => 'test',
+            'process' => 'test',
+            'altitude' => 'test',
+            'descriptor_one' => 'test',
+            'descriptor_two' => 'test',
+            'descriptor_three' => 'test',
+            'image' => 'images/coffee-1.png'
             ]];
         $expected =
-        '<div class="card">'
-            . '<div class="card-image Test">'
-                . '<h3>Test</h3>'
-                . '<h1>Test</h1>'
-                . '<hr>'
-                . '<h2>Test</h2>'
-                . '<h4>Testm</h4>'
-             . '</div>'
-        . '<div class="descriptors">'
-            . '<p class="descriptor">Test</p>'
-             . '<p class="descriptor">Test</p>'
-            . '<p class="descriptor">Test</p>'
-        . '</div>'
-    . '</div>';
+            '<div class="card">'
+            . '<div class="card-box">'
+            . '<img class="card-image" src="images/coffee-1.png" alt="Stock image of coffee farm">'
+            . '<div class="card-text">'
+            . '<h3>test</h3>'
+            . '<h1>test</h1>'
+            . '<hr>'
+            . '<h2>test</h2>'
+            . '<h4>testm</h4>'
+            . '</div>'
+            . '</div>'
+            . '<div class="descriptors">'
+            . '<p class="descriptor">test</p>'
+            . '<p class="descriptor">test</p>'
+            . '<p class="descriptor">test</p>'
+            . '</div>'
+            . '</div>';
 
         $result = generateCard($input);
         $this->assertEquals($expected, $result);
@@ -61,5 +64,51 @@ class functions extends TestCase
         $this->expectException(Exception::class);
         $this->expectErrorMessage('No value has been set');
         $result = generateCard($input);
+    }
+    public function test_generateOriginOptions_givenArray()
+    {
+        $input = [[
+            'id' => 'test',
+            'country' => 'test'
+        ]];
+        $expected = '<option value="test">test</option>';
+        $result = generateOriginOptions($input);
+        $this->assertEquals($expected, $result);
+    }
+    public function test_generateOriginOptions_givenInt()
+    {
+        $input = 1;
+        $this->expectException(TypeError::class);
+        $result = generateOriginOptions($input);
+    }
+    public function test_generateOriginOptions_emptyArray()
+    {
+        $input = [];
+        $this->expectException(Exception::class);
+        $this->expectErrorMessage('No data from database');
+        $result = generateOriginOptions($input);
+    }
+    public function test_generateProcessOptions_givenArray()
+    {
+        $input = [[
+            'id' => 'test',
+            'process' => 'test'
+        ]];
+        $expected = '<option value="test">test</option>';
+        $result = generateProcessOptions($input);
+        $this->assertEquals($expected, $result);
+    }
+    public function test_generateProcessOptions_givenInt()
+    {
+        $input = 1;
+        $this->expectException(TypeError::class);
+        $result = generateProcessOptions($input);
+    }
+    public function test_generateProcessOptions_emptyArray()
+    {
+        $input = [];
+        $this->expectException(Exception::class);
+        $this->expectErrorMessage('No data from database');
+        $result = generateProcessOptions($input);
     }
 }
