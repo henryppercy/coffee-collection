@@ -11,6 +11,11 @@
     --green: #03724B;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 body {
     font-family: 'Vidaloka', serif;
     background-color: var(--tan);
@@ -84,28 +89,11 @@ a {
     color: var(--red);
 }
 
-/*Navbar*/
-nav {
-    padding: 1em;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-    font-size: 1.3rem;
-    font-weight: 700;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/*Title*/
-.title {
-    /*margin: 4.3rem 0 0;*/
-}
-
 /*Main collection*/
 .collection {
     margin: 1rem;
+
+    display: grid;
 }
 
 .collection h1 {
@@ -126,8 +114,34 @@ nav {
 .card {
     text-align: center;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.card-box {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+}
+
+.card-image {
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+
+.card-text {
+    color: var(--tan);
+
+    justify-self: center;
+    align-self: center;
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+.card-text hr {
+    width: 70%;
+    height: 0.2rem;
+    background-color: var(--tan);
+    border: none
 }
 
 .descriptors {
@@ -140,56 +154,6 @@ nav {
 
 .descriptor {
     padding: 0 0.4rem 0;
-}
-
-.bgImgOne {
-    background: url('../images/coffee-1.png');
-}
-
-.bgImgTwo {
-    background: url('../images/coffee-2.png');
-}
-
-.bgImgThree {
-    background: url('../images/coffee-3.png');
-}
-
-.bgImgFour {
-    background: url('../images/coffee-4.png');
-}
-
-.bgImgFive {
-    background: url('../images/coffee-5.png');
-}
-
-.bgImgSix {
-    background: url('../images/coffee-6.png');
-}
-
-.bgImgEight {
-    background: url('../images/coffee-8.png');
-}
-
-.card-image {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto 100%;
-
-    color: var(--tan);
-
-    padding: 3rem 1rem;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.card-image hr {
-    width: 70%;
-    height: 0.2rem;
-    background-color: var(--tan);
-    border: none
 }
 
 .button {
