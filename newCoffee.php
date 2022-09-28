@@ -1,5 +1,7 @@
 <?php
-require_once('functions.php')
+require_once 'functions.php';
+require_once 'newCoffeeToDatabase.php';
+$pdo = connectToDatabase();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +26,7 @@ require_once('functions.php')
         <h1 class="red-bg-highlight">Coffee</h1>
     </section>
     <section class="coffee-form">
-        <form method="post">
+        <form method="post" action="newCoffeeToDatabase.php">
             <label for="name">Coffee Name</label>
             <input type="text" id="name" name="name" placeholder="Los Altos" required>
             <br>
@@ -32,7 +34,6 @@ require_once('functions.php')
             <label for="origin">Country of Origin</label>
             <select id="origin" name="origin" required>
                 <?php
-                $pdo = connectToDatabase();
                 $countries = extractOriginFromDB($pdo);
                 echo generateOriginOptions($countries);
                 ?>
@@ -42,11 +43,7 @@ require_once('functions.php')
             <label for="process">Processing Method</label>
             <select id="process" name="process" required>
                 <?php
-                $pdo = connectToDatabase();
                 $process = extractProcessFromDB($pdo);
-                echo '<pre>';
-                print_r($process);
-                echo '</pre>';
                 echo generateProcessOptions($process);
                 ?>
             </select>
@@ -57,22 +54,22 @@ require_once('functions.php')
             <br>
 
             <label for="name">Tasting Note One</label>
-            <input type="text" id="name" name="name" placeholder="Milk Choc" required>
+            <input type="text" id="descriptor_one" name="descriptor_one" placeholder="Milk Choc" required>
             <br>
 
             <label for="name">Tasting Note Two</label>
-            <input type="text" id="name" name="name" placeholder="Red Fruit" required>
+            <input type="text" id="descriptor_two" name="descriptor_two" placeholder="Red Fruit" required>
             <br>
 
             <label for="name">Tasting Note Three</label>
-            <input type="text" id="name" name="name" placeholder="Hazelnut" required>
+            <input type="text" id="descriptor_three" name="descriptor_three" placeholder="Hazelnut" required>
             <br>
 
             <input type="submit">
         </form>
     </section>
     <section class="button">
-        <a href="">Back to Collection</a>
+        <a href="../coffeeCollection/index.php">Back to Collection</a>
     </section>
 </main>
 <footer>
