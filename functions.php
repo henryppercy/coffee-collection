@@ -64,13 +64,16 @@ function generateCard(array $arrayFromDB): string
         !isset($arrayFromDB[0]['altitude']) ||
         !isset($arrayFromDB[0]['descriptor_one']) ||
         !isset($arrayFromDB[0]['descriptor_two']) ||
-        !isset($arrayFromDB[0]['descriptor_three']) ||
-        !isset($arrayFromDB[0]['image'])
+        !isset($arrayFromDB[0]['descriptor_three'])
     ) {
         throw new Exception('No value has been set');
     }
+
     $card = '';
     foreach ($arrayFromDB as $itemFromDB) {
+        if (!isset($itemFromDB['image'])) {
+            $itemFromDB['image'] = 'images/coffee-3.png';
+        }
         $card .=
             '<div class="card">'
             . '<div class="card-box">'
