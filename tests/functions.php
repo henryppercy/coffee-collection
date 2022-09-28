@@ -38,12 +38,14 @@ class functions extends TestCase
         $result = generateCard($input);
         $this->assertEquals($expected, $result);
     }
+
     public function test_generateCard_givenInt()
     {
         $input = 1;
         $this->expectException(TypeError::class);
         $result = generateCard($input);
     }
+
     public function test_generateCard_emptyArray()
     {
         $input = [];
@@ -51,6 +53,7 @@ class functions extends TestCase
         $this->expectErrorMessage('No data from database');
         $result = generateCard($input);
     }
+
     public function test_generateCard_noValueSetInArray()
     {
         $input = [[
@@ -65,6 +68,7 @@ class functions extends TestCase
         $this->expectErrorMessage('No value has been set');
         $result = generateCard($input);
     }
+
     public function test_generateOriginOptions_givenArray()
     {
         $input = [[
@@ -75,12 +79,14 @@ class functions extends TestCase
         $result = generateOriginOptions($input);
         $this->assertEquals($expected, $result);
     }
+
     public function test_generateOriginOptions_givenInt()
     {
         $input = 1;
         $this->expectException(TypeError::class);
         $result = generateOriginOptions($input);
     }
+
     public function test_generateOriginOptions_emptyArray()
     {
         $input = [];
@@ -88,6 +94,7 @@ class functions extends TestCase
         $this->expectErrorMessage('No data from database');
         $result = generateOriginOptions($input);
     }
+
     public function test_generateProcessOptions_givenArray()
     {
         $input = [[
@@ -98,12 +105,14 @@ class functions extends TestCase
         $result = generateProcessOptions($input);
         $this->assertEquals($expected, $result);
     }
+
     public function test_generateProcessOptions_givenInt()
     {
         $input = 1;
         $this->expectException(TypeError::class);
         $result = generateProcessOptions($input);
     }
+
     public function test_generateProcessOptions_emptyArray()
     {
         $input = [];

@@ -129,7 +129,7 @@ function generateOriginOptions(array $origins): string
 }
 
 /**
- * Takes the connection to the database ($PDO) and queries the database for the processes,
+ * Takes the connection to the database ($PDO) and queries the database for the processes, 
  * returns an array of processes
  *
  * @param PDO $pdo
