@@ -44,9 +44,6 @@ require_once('functions.php')
                 <?php
                 $pdo = connectToDatabase();
                 $process = extractProcessFromDB($pdo);
-                echo '<pre>';
-                print_r($process);
-                echo '</pre>';
                 echo generateProcessOptions($process);
                 ?>
             </select>
@@ -72,7 +69,7 @@ require_once('functions.php')
         </form>
     </section>
     <section class="button">
-        <a href="">Back to Collection</a>
+        <a href="../coffeeCollection/index.php">Back to Collection</a>
     </section>
 </main>
 <footer>
