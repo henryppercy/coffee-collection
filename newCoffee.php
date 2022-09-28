@@ -23,7 +23,7 @@ require_once('functions.php')
         <h1 class="brown-bg-highlight">New</h1>
         <h1 class="red-bg-highlight">Coffee</h1>
     </section>
-    <section>
+    <section class="coffee-form">
         <form method="post">
             <label for="name">Coffee Name</label>
             <br>

@@ -164,6 +164,52 @@ a {
     justify-content: center;
 }
 
+/*Add more coffee*/
+form {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin: 3rem 0 5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    margin-top: 1rem;
+}
+
+input[type=submit] {
+    color: var(--black);
+    background-color: var(--tan);
+    border: none;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+
+    position: relative;
+    text-transform: uppercase;
+}
+
+input[type=submit]:hover {
+    color: var(--tan);
+    box-shadow: inset 200px 0 0 0 var(--brown);
+}
+
+input[type=text], input[type=number], input[type=text], select {
+    background-color: var(--tan);
+    color: var(--black);
+    border: 0.2rem solid var(--black) ;
+    border-radius: 0.2rem;
+}
+
+.coffee-form {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+}
+
+
+
 /*Footer*/
 footer {
     width: 100%;
@@ -174,6 +220,7 @@ footer {
 footer p {
     margin-top: 2rem;
     font-size: 1rem;
+    text-align: center;
 }
 
 /*Media queries*/
@@ -201,16 +248,14 @@ footer p {
     }
 
     a {
-        box-shadow: inset 0 0 0 0 var(--brown);
         color: var(--black);
-        padding: 0 .25rem;
-        margin: 0 -.25rem;
+        background-color: var(--tan);
         transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
     }
 
     a:hover {
         color: var(--tan);
-        box-shadow: inset 200px 0 0 0 var(--brown);
+        box-shadow: inset 300px 0 0 0 var(--brown);
     }
 }
 
