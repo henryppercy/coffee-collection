@@ -118,6 +118,9 @@ function extractOriginFromDB(PDO $pdo): array
  */
 function generateOriginOptions(array $origins): string
 {
+    if (count($origins) === 0) {
+        throw new Exception('No data from database');
+    }
     $option = '';
     foreach($origins as $origin){
         $option .= '<option value="' . $origin['id'] . '">' . $origin['country'] . '</option>';
@@ -147,6 +150,9 @@ function extractProcessFromDB(PDO $pdo): array
  */
 function generateProcessOptions(array $processes): string
 {
+    if (count($processes) === 0) {
+        throw new Exception('No data from database');
+    }
     $option = '';
     foreach($processes as $process){
         $option .= '<option value="' . $process['id'] . '">' . $process['process'] . '</option>';
