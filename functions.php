@@ -28,7 +28,7 @@ function connectToDatabase(): PDO
 
 /**
  * Takes the connection to the database ($PDO) and queries the database for all the information on a given coffee,
- * returns as an array.
+ * returns as an array of coffees.
  *
  * @param PDO $pdo
  * @return array
@@ -42,6 +42,64 @@ function extractFromDB(PDO $pdo): array
                 ON `coffees`.`process` = `processes`.`id`;');
     $query->execute();
     return $query->fetchAll();
+}
+
+/**
+ * Takes the connection to the database ($PDO) and queries the database for the countries,
+ * returns an array of countries
+ *
+ * @param PDO $pdo
+ * @return array
+ */
+function extractOriginFromDB(PDO $pdo): array
+{
+    $query = $pdo->prepare('SELECT `id`,`country` FROM `countries`;');
+    $query->execute();
+    return $query->fetchAll();
+}
+
+/**
+ * Takes the origin data from the database and generates HTML <option> element, returned as string.
+ *
+ * @param array $origins
+ * @return string
+ */
+function generateOriginOptions(array $origins): string
+{
+    $option = '';
+    foreach($origins as $origin){
+        $option .= '<option value="' . $origin['id'] . '">' . $origin['country'] . '</option>';
+    }
+    return $option;
+}
+
+/**
+ * Takes the connection to the database ($PDO) and queries the database for the processes,
+ * returns an array of processes
+ *
+ * @param PDO $pdo
+ * @return array
+ */
+function extractProcessFromDB(PDO $pdo): array
+{
+    $query = $pdo->prepare('SELECT `id`,`process` FROM `processes`;');
+    $query->execute();
+    return $query->fetchAll();
+}
+
+/**
+ * Takes the process data from the database and generates HTML <option> element, returned as string.
+ *
+ * @param array $processes
+ * @return string
+ */
+function generateProcessOptions(array $processes): string
+{
+    $option = '';
+    foreach($processes as $process){
+        $option .= '<option value="' . $process['id'] . '">' . $process['process'] . '</option>';
+    }
+    return $option;
 }
 
 /**
