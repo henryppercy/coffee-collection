@@ -208,7 +208,9 @@ input[type=text], input[type=number], input[type=text], select {
     grid-template-columns: 1fr;
 }
 
-
+::placeholder {
+    color: #706C6A;
+}
 
 /*Footer*/
 footer {

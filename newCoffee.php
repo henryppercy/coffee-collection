@@ -27,7 +27,7 @@ require_once('functions.php')
         <form method="post">
             <label for="name">Coffee Name</label>
             <br>
-            <input type="text" id="name" name="name" placeholder="" required>
+            <input type="text" id="name" name="name" placeholder="Los Altos" required>
             <br>
 
             <label for="origin">Country of Origin</label>
@@ -46,22 +46,22 @@ require_once('functions.php')
 
             <label for="altitude">Growing Altitude</label>
             <br>
-            <input type="number" step="100"  id="altitude" name="altitude" placeholder="" required>
+            <input type="number" step="100"  id="altitude" name="altitude" placeholder="1300" required>
             <br>
 
             <label for="name">Tasting Note One</label>
             <br>
-            <input type="text" id="name" name="name" placeholder="" required>
+            <input type="text" id="name" name="name" placeholder="Milk Choc" required>
             <br>
 
             <label for="name">Tasting Note Two</label>
             <br>
-            <input type="text" id="name" name="name" placeholder="" required>
+            <input type="text" id="name" name="name" placeholder="Red Fruit" required>
             <br>
 
             <label for="name">Tasting Note Three</label>
             <br>
-            <input type="text" id="name" name="name" placeholder="" required>
+            <input type="text" id="name" name="name" placeholder="Hazelnut" required>
             <br>
 
             <input type="submit">
