@@ -89,6 +89,18 @@ a {
     color: var(--red);
 }
 
+.intro-add {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.add {
+    font-size: 2rem;
+
+    justify-self: center;
+    align-self: center;
+}
+
 /*Main collection*/
 .collection {
     margin: 1rem;
