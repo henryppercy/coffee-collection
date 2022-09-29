@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.39)
 # Database: coffeecollection
-# Generation Time: 2022-09-27 13:23:21 +0000
+# Generation Time: 2022-09-29 09:43:48 +0000
 # ************************************************************
 
 
@@ -27,33 +27,33 @@ DROP TABLE IF EXISTS `coffees`;
 
 CREATE TABLE `coffees` (
                            `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-                           `name` varchar(255) DEFAULT NULL,
+                           `name` varchar(255) NOT NULL,
                            `origin` int(11) NOT NULL,
                            `process` int(11) NOT NULL,
-                           `descriptors_one` varchar(255) DEFAULT NULL,
-                           `descriptors_two` varchar(255) DEFAULT NULL,
-                           `descriptors_three` varchar(255) DEFAULT NULL,
-                           `altitude` int(11) DEFAULT NULL,
-                           `image` varchar(255) NOT NULL,
+                           `descriptor_one` varchar(255) DEFAULT NULL,
+                           `descriptor_two` varchar(255) DEFAULT NULL,
+                           `descriptor_three` varchar(255) DEFAULT NULL,
+                           `altitude` int(11) NOT NULL,
+                           `image` varchar(255) DEFAULT NULL,
                            PRIMARY KEY (`id`),
                            KEY `origin` (`origin`),
                            KEY `process` (`process`),
                            CONSTRAINT `coffees_ibfk_1` FOREIGN KEY (`origin`) REFERENCES `countries` (`id`),
                            CONSTRAINT `coffees_ibfk_2` FOREIGN KEY (`process`) REFERENCES `processes` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
 LOCK TABLES `coffees` WRITE;
 /*!40000 ALTER TABLE `coffees` DISABLE KEYS */;
 
-INSERT INTO `coffees` (`id`, `name`, `origin`, `process`, `descriptors_one`, `descriptors_two`, `descriptors_three`, `altitude`, `image`)
+INSERT INTO `coffees` (`id`, `name`, `origin`, `process`, `descriptor_one`, `descriptor_two`, `descriptor_three`, `altitude`, `image`)
 VALUES
-    (1,'Brazil Classico',1,1,'Honey','Surgarcane Molasses ','Hazelnut',1500,'bgImgOne'),
-    (2,'BS1 Espresso',2,2,'Milk Choc','Sticky Caramel','Red Fruit',2000,'bgImgTwo'),
-    (3,'Indonesia Kerinchi',4,1,'Cherry Choc','Lemon','Brown Spice',1700,'bgImgThree'),
-    (4,'Los Altos',12,2,'Roasted Almond','Chocolate','Brown Surgar',1300,'bgImgFour'),
-    (5,'Kirundo Cafex ',31,1,'Baked Apple','Dates','Oolong Tea',1730,'bgImgFive'),
-    (6,'Finca Hartmann',37,2,'Apricot','Damson','Dark Chocolate',1800,'bgImgSix'),
-    (7,'Santa Elena',19,2,'Clementine','Plum','Sugarcane',1900,'bgImgEight');
+    (1,'Brazil Classico',1,1,'Honey','Surgarcane Molasses ','Hazelnut',1500,'images/coffee-1.png'),
+    (2,'BS1 Espresso',2,2,'Milk Choc','Sticky Caramel','Red Fruit',2000,'images/coffee-2.png'),
+    (3,'Indonesia Kerinchi',4,1,'Cherry Choc','Lemon','Brown Spice',1700,'images/coffee-3.png'),
+    (4,'Los Altos',12,2,'Roasted Almond','Chocolate','Brown Sugar',1300,'images/coffee-4.png'),
+    (5,'Kirundo Cafex ',31,1,'Baked Apple','Dates','Oolong Tea',1730,'images/coffee-5.png'),
+    (6,'Finca Hartmann',37,2,'Apricot','Damson','Dark Chocolate',1800,'images/coffee-6.png'),
+    (7,'Santa Elena',19,2,'Clementine','Plum','Sugarcane',1900,'images/coffee-7.png');
 
 /*!40000 ALTER TABLE `coffees` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -88,7 +88,7 @@ VALUES
     (11,'Peru'),
     (12,'Nicaragua'),
     (13,'China'),
-    (14,'Côte dIvoire'),
+    (14,'Cote dIvoire'),
     (15,'Costa Rica'),
     (16,'Kenya'),
     (17,'Papua New Guinea'),
