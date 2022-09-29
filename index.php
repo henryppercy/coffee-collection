@@ -35,7 +35,7 @@ require_once('functions.php')
         echo generateCard($coffees);
         ?>
     </section>
-    <section class="button">
+    <section class="to-top">
         <a href="#top">Back to top</a>
     </section>
 </main>

@@ -68,7 +68,7 @@ $pdo = connectToDatabase();
             <input type="submit">
         </form>
     </section>
-    <section class="button">
+    <section class="to-top">
         <a href="../coffeeCollection/index.php">Back to Collection</a>
     </section>
 </main>

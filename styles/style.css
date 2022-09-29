@@ -168,7 +168,7 @@ a {
     padding: 0 0.4rem 0;
 }
 
-.button {
+.to-top {
     text-align: center;
     font-size: 1.5rem;
 
@@ -204,7 +204,7 @@ input[type=submit] {
 
 input[type=submit]:hover {
     color: var(--tan);
-    box-shadow: inset 200px 0 0 0 var(--brown);
+    box-shadow: inset 19rem 0 0 0 var(--brown);
 }
 
 input[type=text], input[type=number], input[type=text], select {
@@ -273,7 +273,7 @@ footer p {
 
     a:hover {
         color: var(--tan);
-        box-shadow: inset 300px 0 0 0 var(--brown);
+        box-shadow: inset 19rem 0 0 0 var(--brown);
     }
 }
 
