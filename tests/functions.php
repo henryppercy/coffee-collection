@@ -15,7 +15,7 @@ class functions extends TestCase
             'descriptor_two' => 'test',
             'descriptor_three' => 'test',
             'image' => 'images/coffee-1.png'
-            ]];
+        ]];
         $expected =
             '<div class="card">'
             . '<div class="card-box">'
