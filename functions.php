@@ -158,6 +158,13 @@ function generateProcessOptions(array $processes): string
     return $option;
 }
 
+/**
+ * Takes an array ($_POST) which is the user input from addCoffee.php then inserts into the coffees table.
+ *
+ * @param array $newCoffee
+ * @param PDO $pdo
+ * @return void
+ */
 function addToDatabase(array $newCoffee, PDO $pdo):void
 {
     $query = $pdo->prepare('INSERT INTO `coffees` 
@@ -166,7 +173,15 @@ function addToDatabase(array $newCoffee, PDO $pdo):void
     $query->execute($newCoffee);
 }
 
-
+/**
+ * Takes an array ($_POST) which is the user input from addCoffee.php then sanitises by removing whitespace and html
+ * special charters.
+ *
+ * Returns the sanitised array.
+ *
+ * @param array $formData
+ * @return array
+ */
 function sanitiseFormData(array $formData): array
 {
     $cleanFormData = [];

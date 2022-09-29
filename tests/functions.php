@@ -120,4 +120,43 @@ class functions extends TestCase
         $this->expectErrorMessage('No data from database');
         $result = generateProcessOptions($input);
     }
+
+    public function test_sanitiseFormData_givenArrayWhitespace()
+    {
+        $input = [
+            'key' => '   Value     ',
+        ];
+        $expected = [
+            'key' => 'Value',
+        ];
+        $result = sanitiseFormData($input);
+        $this->assertEquals($expected, $result);
+    }
+
+    public function test_sanitiseFormData_givenArrayHTML()
+    {
+        $input = [
+            'key' => '<div>Test</div>'
+        ];
+        $expected = [
+            'key' => '&lt;div&gt;Test&lt;/div&gt;'
+        ];
+        $result = sanitiseFormData($input);
+        $this->assertEquals($expected, $result);
+    }
+
+    public function test_sanitiseFormData_givenArrayEmpty()
+    {
+        $input = [];
+        $expected = [];
+        $result = sanitiseFormData($input);
+        $this->assertEquals($expected, $result);
+    }
+
+    public function test_sanitiseFormData_givenInt()
+    {
+        $input = 1;
+        $this->expectException(TypeError::class);
+        $result = sanitiseFormData($input);
+    }
 }
