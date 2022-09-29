@@ -70,7 +70,7 @@ function generateCard(array $arrayFromDB): string
     $card = '';
     foreach ($arrayFromDB as $itemFromDB) {
         if (!isset($itemFromDB['image'])) {
-            $itemFromDB['image'] = 'images/coffee-8.jpeg';
+            $itemFromDB['image'] = 'images/coffee-3.jpeg';
         }
         $card .=
             '<div class="card">'
