@@ -61,7 +61,7 @@ p {
 a {
     color: var(--tan);
 
-    position: relative;
+    /*position: relative;*/
     text-transform: uppercase;
 }
 
@@ -92,13 +92,6 @@ a {
 .intro-add {
     display: grid;
     grid-template-columns: 1fr;
-}
-
-.add {
-    font-size: 2rem;
-
-    justify-self: center;
-    align-self: center;
 }
 
 /*Main collection*/
@@ -170,7 +163,7 @@ a {
 
 .to-top {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 
     display: flex;
     justify-content: center;
@@ -195,8 +188,12 @@ label {
 input[type=submit] {
     color: var(--black);
     background-color: var(--tan);
-    border: none;
+    border: 0.15rem solid var(--brown);
+    border-radius: 0.3rem;
+    padding: 0.4rem 6rem 0.4rem;
+    margin-top: 2rem;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    cursor: pointer;
 
     position: relative;
     text-transform: uppercase;
@@ -230,16 +227,50 @@ sup {
 }
 
 /*Footer*/
-footer {
-    width: 100%;
-    height: 4rem;
+.footer {
     text-align: center;
+    padding: 2rem 4rem 0;
+
+    background-color: var(--brown);
 }
 
-footer p {
-    margin-top: 2rem;
+.footer p {
+    color: var(--tan);
+    margin: 2rem 0 0;
     font-size: 1rem;
     text-align: center;
+    padding-bottom: 1rem;
+}
+
+a.footer-btn {
+    color: var(--tan);
+    font-size: 1.3rem;
+    padding-bottom: 0.25rem;
+    position: relative;
+}
+
+.button {
+    font-size: 2rem;
+
+    justify-self: center;
+    align-self: center;
+
+    color: var(--black);
+    background-color: var(--tan);
+    border: 0.15rem solid var(--brown);
+    border-radius: 0.3rem;
+    padding: 0.4rem 1rem 0.4rem;
+    margin-top: 2rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    cursor: pointer;
+
+    position: relative;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    color: var(--tan);
+    box-shadow: inset 20rem 0 0 0 var(--brown);
 }
 
 /*Media queries*/
@@ -266,15 +297,18 @@ footer p {
         column-gap: 2rem;
     }
 
-    a {
-        color: var(--black);
+    a.footer-btn::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 0.1rem;
         background-color: var(--tan);
-        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+        transition: width 0.25s ease-out;
     }
 
-    a:hover {
-        color: var(--tan);
-        box-shadow: inset 19rem 0 0 0 var(--brown);
+    a.footer-btn:hover::before {
+        width: 100%;
     }
 }
 

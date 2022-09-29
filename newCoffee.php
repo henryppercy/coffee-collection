@@ -68,11 +68,9 @@ $pdo = connectToDatabase();
             <input type="submit">
         </form>
     </section>
-    <section class="to-top">
-        <a href="../coffeeCollection/index.php">Back to Collection</a>
-    </section>
 </main>
-<footer>
+<footer class="footer">
+    <a class="footer-btn" href="../coffeeCollection/index.php">Back to Collection</a>
     <p>© 2022 | Henry Percy</p>
 </footer>
 </body>

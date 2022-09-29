@@ -25,8 +25,8 @@ require_once('functions.php')
         <h2>A Collection of Coffee from <span class="green-highlight">El Salvador</span> to  <span class="red-highlight">Ethiopia</span></h2>
     </section>
     <section class="intro-add">
+        <a class="button" href="newCoffee.php">Add more coffee</a>
         <h3 class="intro">Please Explore the Coffee Below</h3>
-        <a class="add" href="newCoffee.php">Add more coffee</a>
     </section>
     <section class="collection">
         <?php
@@ -35,12 +35,12 @@ require_once('functions.php')
         echo generateCard($coffees);
         ?>
     </section>
-    <section class="to-top">
-        <a href="#top">Back to top</a>
-    </section>
 </main>
 <footer>
-    <p>© 2022 | Henry Percy</p>
+    <section class="footer">
+        <a class="footer-btn" href="#top">Back to top</a>
+        <p>© 2022 | Henry Percy</p>
+    </section>
 </footer>
 </body>
 </html>
