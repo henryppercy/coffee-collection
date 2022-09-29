@@ -50,7 +50,7 @@ $pdo = connectToDatabase();
             <br>
 
             <label for="altitude">Growing Altitude</label>
-            <input type="number" step="100"  id="altitude" name="altitude" placeholder="1300" required>
+            <input type="number" id="altitude" name="altitude" placeholder="1300" required>
             <br>
 
             <label for="name">Tasting Note One</label>
