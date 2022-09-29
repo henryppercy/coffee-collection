@@ -25,8 +25,8 @@ require_once('functions.php')
         <h2>A Collection of Coffee from <span class="green-highlight">El Salvador</span> to  <span class="red-highlight">Ethiopia</span></h2>
     </section>
     <section class="intro-add">
-        <a class="button" href="newCoffee.php">Add more coffee</a>
         <h3>Please Explore the Coffee Below</h3>
+        <a class="button" href="newCoffee.php">Add more coffee</a>
     </section>
     <section class="collection">
         <?php
