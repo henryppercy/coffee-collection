@@ -49,7 +49,7 @@ $pdo = connectToDatabase();
             </select>
             <br>
 
-            <label for="altitude">Growing Altitude<sup>*</sup></label>
+            <label for="altitude">Growing Altitude (Meters)<sup>*</sup></label>
             <input type="number" id="altitude" name="altitude" placeholder="1300" required>
             <br>
 
