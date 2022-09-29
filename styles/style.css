@@ -201,7 +201,7 @@ input[type=submit] {
 
 input[type=submit]:hover {
     color: var(--tan);
-    box-shadow: inset 19rem 0 0 0 var(--brown);
+    box-shadow: inset 5rem 0 0 0 var(--brown);
 }
 
 input[type=text], input[type=number], input[type=text], select {
@@ -209,7 +209,6 @@ input[type=text], input[type=number], input[type=text], select {
     color: var(--black);
     border: 0.15rem solid var(--black) ;
     border-radius: 0.3rem;
-    width: 32rem;
 }
 
 .coffee-form {
@@ -309,6 +308,14 @@ a.footer-btn {
 
     a.footer-btn:hover::before {
         width: 100%;
+    }
+
+    input[type=text], input[type=number], input[type=text], select {
+        width: 32rem;
+    }
+
+    input[type=submit]:hover {
+        box-shadow: inset 19rem 0 0 0 var(--brown);
     }
 }
 
