@@ -165,3 +165,15 @@ function addToDatabase(array $newCoffee, PDO $pdo):void
     VALUES (:name, :origin, :process, :descriptor_one, :descriptor_two, :descriptor_three, :altitude);');
     $query->execute($newCoffee);
 }
+
+
+function sanitiseFormData(array $formData): array
+{
+    $cleanFormData = [];
+    foreach ($formData as $key => $value) {
+        $cleanData = trim($value);
+        $cleanData = htmlspecialchars($cleanData);
+        $cleanFormData[$key] = $cleanData;
+    }
+    return $cleanFormData;
+}

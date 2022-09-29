@@ -1,15 +1,17 @@
 <?php
 require_once ('functions.php');
 
-if (isset($_POST['name']) &&
-    isset($_POST['origin']) &&
-    isset($_POST['process']) &&
-    isset($_POST['descriptor_one']) &&
-    isset($_POST['descriptor_two']) &&
-    isset($_POST['descriptor_three']) &&
-    isset($_POST['altitude'])
+$sanitisedData = sanitiseFormData($_POST);
+
+if (isset($sanitisedData['name']) &&
+    isset($sanitisedData['origin']) &&
+    isset($sanitisedData['process']) &&
+    isset($sanitisedData['descriptor_one']) &&
+    isset($sanitisedData['descriptor_two']) &&
+    isset($sanitisedData['descriptor_three']) &&
+    isset($sanitisedData['altitude'])
 ) {
     $pdo = connectToDatabase();
-    addToDatabase($_POST, $pdo);
+    addToDatabase($sanitisedData, $pdo);
     header('location: index.php');
 }
