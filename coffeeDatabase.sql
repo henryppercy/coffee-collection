@@ -47,7 +47,7 @@ LOCK TABLES `coffees` WRITE;
 
 INSERT INTO `coffees` (`id`, `name`, `origin`, `process`, `descriptor_one`, `descriptor_two`, `descriptor_three`, `altitude`, `image`)
 VALUES
-    (1,'Brazil Classico',1,1,'Honey','Surgarcane Molasses ','Hazelnut',1500,'images/coffee-1.png'),
+    (1,'Brazil Classico',1,1,'Honey','Sugarcane Molasses ','Hazelnut',1500,'images/coffee-1.png'),
     (2,'BS1 Espresso',2,2,'Milk Choc','Sticky Caramel','Red Fruit',2000,'images/coffee-2.png'),
     (3,'Indonesia Kerinchi',4,1,'Cherry Choc','Lemon','Brown Spice',1700,'images/coffee-3.png'),
     (4,'Los Altos',12,2,'Roasted Almond','Chocolate','Brown Sugar',1300,'images/coffee-4.png'),
