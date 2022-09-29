@@ -39,7 +39,8 @@ function extractFromDB(PDO $pdo): array
         'SELECT `coffees`.`id`, `name`, `countries`.`country`, `processes`.`process`, `descriptor_one`, 
                 `descriptor_two`, `descriptor_three`, `altitude`, `image`
                 FROM `coffees` LEFT JOIN `countries` ON `coffees`.`origin` = `countries`.`id` LEFT JOIN `processes` 
-                ON `coffees`.`process` = `processes`.`id`;');
+                ON `coffees`.`process` = `processes`.`id`
+                ORDER BY `id`;');
     $query->execute();
     return $query->fetchAll();
 }
