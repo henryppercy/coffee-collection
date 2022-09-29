@@ -47,13 +47,13 @@ LOCK TABLES `coffees` WRITE;
 
 INSERT INTO `coffees` (`id`, `name`, `origin`, `process`, `descriptor_one`, `descriptor_two`, `descriptor_three`, `altitude`, `image`)
 VALUES
-    (1,'Brazil Classico',1,1,'Honey','Sugarcane Molasses ','Hazelnut',1500,'images/coffee-1.png'),
-    (2,'BS1 Espresso',2,2,'Milk Choc','Sticky Caramel','Red Fruit',2000,'images/coffee-2.png'),
-    (3,'Indonesia Kerinchi',4,1,'Cherry Choc','Lemon','Brown Spice',1700,'images/coffee-3.png'),
-    (4,'Los Altos',12,2,'Roasted Almond','Chocolate','Brown Sugar',1300,'images/coffee-4.png'),
-    (5,'Kirundo Cafex ',31,1,'Baked Apple','Dates','Oolong Tea',1730,'images/coffee-5.png'),
-    (6,'Finca Hartmann',37,2,'Apricot','Damson','Dark Chocolate',1800,'images/coffee-6.png'),
-    (7,'Santa Elena',19,2,'Clementine','Plum','Sugarcane',1900,'images/coffee-7.png');
+    (1,'Brazil Classico',1,1,'Honey','Sugarcane Molasses ','Hazelnut',1500,'images/coffee-1.jpeg'),
+    (2,'BS1 Espresso',2,2,'Milk Choc','Sticky Caramel','Red Fruit',2000,'images/coffee-2.jpeg'),
+    (3,'Indonesia Kerinchi',4,1,'Cherry Choc','Lemon','Brown Spice',1700,'images/coffee-3.jpeg'),
+    (4,'Los Altos',12,2,'Roasted Almond','Chocolate','Brown Sugar',1300,'images/coffee-4.jpeg'),
+    (5,'Kirundo Cafex ',31,1,'Baked Apple','Dates','Oolong Tea',1730,'images/coffee-5.jpeg'),
+    (6,'Finca Hartmann',37,2,'Apricot','Damson','Dark Chocolate',1800,'images/coffee-6.jpeg'),
+    (7,'Santa Elena',19,2,'Clementine','Plum','Sugarcane',1900,'images/coffee-7.jpeg');
 
 /*!40000 ALTER TABLE `coffees` ENABLE KEYS */;
 UNLOCK TABLES;
