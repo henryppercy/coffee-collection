@@ -54,15 +54,15 @@ $pdo = connectToDatabase();
             <br>
 
             <label for="name">Tasting Note One</label>
-            <input type="text" id="descriptor_one" name="descriptor_one" placeholder="Milk Choc" required>
+            <input type="text" id="descriptor_one" name="descriptor_one" placeholder="Milk Choc">
             <br>
 
             <label for="name">Tasting Note Two</label>
-            <input type="text" id="descriptor_two" name="descriptor_two" placeholder="Red Fruit" required>
+            <input type="text" id="descriptor_two" name="descriptor_two" placeholder="Red Fruit">
             <br>
 
             <label for="name">Tasting Note Three</label>
-            <input type="text" id="descriptor_three" name="descriptor_three" placeholder="Hazelnut" required>
+            <input type="text" id="descriptor_three" name="descriptor_three" placeholder="Hazelnut">
             <br>
 
             <input type="submit">

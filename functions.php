@@ -62,10 +62,7 @@ function generateCard(array $arrayFromDB): string
         !isset($arrayFromDB[0]['country']) ||
         !isset($arrayFromDB[0]['name']) ||
         !isset($arrayFromDB[0]['process']) ||
-        !isset($arrayFromDB[0]['altitude']) ||
-        !isset($arrayFromDB[0]['descriptor_one']) ||
-        !isset($arrayFromDB[0]['descriptor_two']) ||
-        !isset($arrayFromDB[0]['descriptor_three'])
+        !isset($arrayFromDB[0]['altitude'])
     ) {
         throw new Exception('No value has been set');
     }
