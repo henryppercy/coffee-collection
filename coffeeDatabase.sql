@@ -103,7 +103,7 @@ VALUES
     (26,'Venezuela'),
     (27,'Dominican Republic'),
     (28,'Haiti'),
-    (29,'Democratic Republic of the Congo'),
+    (29,'DRC'),
     (30,'Rwanda'),
     (31,'Burundi'),
     (32,'Philippines'),
