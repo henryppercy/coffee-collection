@@ -29,9 +29,9 @@ class functions extends TestCase
             . '</div>'
             . '</div>'
             . '<div class="descriptors">'
-            . '<p class="descriptor">test</p>'
-            . '<p class="descriptor">test</p>'
-            . '<p class="descriptor">test</p>'
+            . '<p class="descriptor green-bg-highlight">test</p>'
+            . '<p class="descriptor brown-bg-highlight">test</p>'
+            . '<p class="descriptor red-bg-highlight card-bottom">test</p>'
             . '</div>'
             . '</div>';
 
