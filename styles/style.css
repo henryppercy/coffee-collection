@@ -129,7 +129,7 @@ a {
 }
 
 .card-image {
-    border-radius: 1rem;
+    border-radius: 1.5rem 1.5rem 0 0;
     grid-row-start: 1;
     grid-column-start: 1;
 }
@@ -158,11 +158,14 @@ a {
 
 
 .descriptor {
+    font-size: 1.3rem;
     margin: 0;
     padding: 0.4rem 0 0.4rem;
-    border-radius: 0.2rem;
-    border-bottom: solid 0.2rem var(--black);
     text-transform: uppercase;
+}
+
+.card-bottom {
+    border-radius: 0 0 0.4rem 0.4rem;
 }
 
 .to-top {

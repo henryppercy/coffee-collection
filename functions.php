@@ -85,9 +85,9 @@ function generateCard(array $arrayFromDB): string
             . '</div>'
             . '</div>'
             . '<div class="descriptors">'
-            . '<p class="descriptor">' . $itemFromDB['descriptor_one'] . '</p>'
-            . '<p class="descriptor">' . $itemFromDB['descriptor_two'] . '</p>'
-            . '<p class="descriptor">' . $itemFromDB['descriptor_three'] . '</p>'
+            . '<p class="descriptor green-bg-highlight">' . $itemFromDB['descriptor_one'] . '</p>'
+            . '<p class="descriptor brown-bg-highlight">' . $itemFromDB['descriptor_two'] . '</p>'
+            . '<p class="descriptor red-bg-highlight card-bottom">' . $itemFromDB['descriptor_three'] . '</p>'
             . '</div>'
             . '</div>';
     }
