@@ -26,7 +26,7 @@ require_once('functions.php')
     </section>
     <section class="intro-add">
         <a class="button" href="newCoffee.php">Add more coffee</a>
-        <h3 class="intro">Please Explore the Coffee Below</h3>
+        <h3>Please Explore the Coffee Below</h3>
     </section>
     <section class="collection">
         <?php

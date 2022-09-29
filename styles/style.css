@@ -43,11 +43,12 @@ h1 {
 
 h2 {
     font-size: 1.7rem;
+    margin: 3rem 0 1rem;
 }
 
 h3 {
     font-size: 1.3rem;
-    padding: 0.2rem 0 0.2rem;
+    margin: 2rem 0 1rem;
 }
 
 h4 {
@@ -60,8 +61,6 @@ p {
 
 a {
     color: var(--tan);
-
-    /*position: relative;*/
     text-transform: uppercase;
 }
 
@@ -258,8 +257,7 @@ a.footer-btn {
     background-color: var(--tan);
     border: 0.15rem solid var(--brown);
     border-radius: 0.3rem;
-    padding: 0.4rem 1rem 0.4rem;
-    margin-top: 2rem;
+    padding: 0.4rem 3rem 0.4rem;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
     cursor: pointer;
 
@@ -269,7 +267,7 @@ a.footer-btn {
 
 .button:hover {
     color: var(--tan);
-    box-shadow: inset 20rem 0 0 0 var(--brown);
+    box-shadow: inset 25rem 0 0 0 var(--brown);
 }
 
 /*Media queries*/
@@ -284,7 +282,7 @@ a.footer-btn {
     }
 
     h3 {
-        margin: 4rem;
+        margin: 5rem 0 0;
         font-size: 2rem;
     }
 
