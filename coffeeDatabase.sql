@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.39)
 # Database: coffeecollection
-# Generation Time: 2022-09-29 08:36:12 +0000
+# Generation Time: 2022-09-29 09:43:48 +0000
 # ************************************************************
 
 
@@ -27,20 +27,20 @@ DROP TABLE IF EXISTS `coffees`;
 
 CREATE TABLE `coffees` (
                            `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-                           `name` varchar(255) DEFAULT NULL,
+                           `name` varchar(255) NOT NULL,
                            `origin` int(11) NOT NULL,
                            `process` int(11) NOT NULL,
                            `descriptor_one` varchar(255) DEFAULT NULL,
                            `descriptor_two` varchar(255) DEFAULT NULL,
                            `descriptor_three` varchar(255) DEFAULT NULL,
-                           `altitude` int(11) DEFAULT NULL,
+                           `altitude` int(11) NOT NULL,
                            `image` varchar(255) DEFAULT NULL,
                            PRIMARY KEY (`id`),
                            KEY `origin` (`origin`),
                            KEY `process` (`process`),
                            CONSTRAINT `coffees_ibfk_1` FOREIGN KEY (`origin`) REFERENCES `countries` (`id`),
                            CONSTRAINT `coffees_ibfk_2` FOREIGN KEY (`process`) REFERENCES `processes` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
 LOCK TABLES `coffees` WRITE;
 /*!40000 ALTER TABLE `coffees` DISABLE KEYS */;
