@@ -224,6 +224,10 @@ input[type=text], input[type=number], input[type=text], select {
     color: #706C6A;
 }
 
+sup {
+    color: var(--red);
+}
+
 /*Footer*/
 footer {
     width: 100%;
