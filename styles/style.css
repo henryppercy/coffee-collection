@@ -37,8 +37,8 @@ h1, h2, h3 {
 }
 
 h1 {
-    margin: 0;
     font-size: 4rem;
+    margin: 0;
 }
 
 h2 {
@@ -130,6 +130,7 @@ a {
 
 .card-image {
     border-radius: 1.5rem 1.5rem 0 0;
+
     grid-row-start: 1;
     grid-column-start: 1;
 }
@@ -142,6 +143,7 @@ a {
     grid-row-start: 1;
     grid-column-start: 1;
 }
+
 .card-text hr {
     width: 70%;
     height: 0.2rem;
@@ -155,7 +157,6 @@ a {
     display: grid;
     grid-template-columns: 1fr;
 }
-
 
 .descriptor {
     font-size: 1.3rem;
